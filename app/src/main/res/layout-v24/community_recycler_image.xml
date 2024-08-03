@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ 作者：远赤Copyright (c) 2023
+  ~ 未经允许，禁止转载！！
+  ~ 联系方式：QQ
+  ~ 2308762185
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:layout_marginStart="10dp"
+    android:gravity="center"
+    android:layout_width="80dp"
+    android:layout_height="80dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/recycler_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/imageRadius" />
+
+</LinearLayout>

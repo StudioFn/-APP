@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ 作者：远赤Copyright (c) 2023
+  ~ 未经允许，禁止转载！！
+  ~ 联系方式：QQ
+  ~ 2308762185
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    顶部标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:elevation="3dp"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:id="@+id/step_exit"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/turn_left_night" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="微信步数修改"
+            android:textColor="#2C2C2C"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/step_help"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/help_video"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:gravity="center|top"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="微信步数修改"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:textColor="#2C2C2C"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="大学生必备的微信步数修改器"
+            android:textSize="16sp"
+            android:gravity="start"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:src="@drawable/ic_article"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <EditText
+            android:id="@+id/setp_account"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:hint="请输入邮箱或者手机号"
+            android:background="@drawable/draw_style"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/setp_password"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:hint="请输入密码"
+            android:background="@drawable/draw_style"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="start|center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/setp_num"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:hint="请输入步数"
+                android:background="@drawable/draw_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/setp_enter"
+                android:background="@drawable/draw_button1"
+                android:textColor="#FFFFFF"
+                android:text="确认"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

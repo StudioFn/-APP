@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">和圈APP</string>
+    <string name="about">免责声明\n    此功能的代码由负负提供，本应用对海螺壳脚本工具里的图片转脚本功能进行了简化与UI美化，欢迎加入海螺壳测试群：824282518</string>
+    <string name="article">今天这个日子，值得我铭记一生，也必将成为我大宋朝科举史上浓墨重彩的一笔——我又双叒叕落榜了。\n</string>
+    <string name="todo">TODO</string>
+    <string name="appkey">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6Nzk2MTIyMTMyOTMwNzExNTUyLCJnZXRNYW5hZ2VtZW50SWQiOjcyNzAwMzgzMDgyMDYyMjMzNiwiVElNRSI6MTY3ODkyMTkxNzk2NH0.nIXtnCYjctXI1VyCj6SyMiU1oXiIpKP0y69CqHnM960</string>
+    <string name="photo_bed_about">1.在什么时候需要配置图床？\n 当你无法上传图片的时候。\n2.上传图片，必须遵守哪些规定？\n 不许上传黄图、军事敏感相关图片、及中国大陆和香港法律规定的图片\n 凡是违规者后果自负，你们每上传一张图片都将附带上你自己的IP地址在里面，由果果图床储存，要查起来相当容易，小心！！\n3.如何使用?\n 如果您已经有账号了，直接输入邮箱号与密码再点击获取按钮即可。如果您未拥有果果图床账号，请点击右上角的注册按钮进行注册，再按上面说的进行操作即可。</string>
+    <string name="s">\\]|\\[|\\s</string>
+</resources>

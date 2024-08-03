@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    顶部标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:elevation="3dp"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:id="@+id/draw_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/turn_left_night" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="像素画"
+            android:textColor="#615F5F"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:elevation="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="340dp"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:background="@drawable/draw_style"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/condition"
+            android:layout_marginTop="20dp"
+            android:text="开发者联盟x海螺壳脚本工具"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/draw_a"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/draw_ic_banner"
+            app:shapeAppearanceOverlay="@style/drawActivity" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/progress_theme"
+            android:thumb="@drawable/draw_activity2"
+            android:thumbOffset="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="325dp"
+            android:layout_height="20dp" />
+        <LinearLayout
+            android:id="@+id/go_lua"
+            android:clickable="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/draw_activity2"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/text_init"
+                android:text="生成脚本"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/copy"
+                android:clickable="true"
+                android:background="@drawable/draw_button1"
+                android:textColor="#FFFFFF"
+                android:text="复制脚本"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/send"
+                android:clickable="true"
+                android:background="@drawable/draw_button2"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:text="分享"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@drawable/draw_style"
+        android:layout_marginTop="20dp"
+        android:layout_width="340dp"
+        android:layout_height="250dp">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+            <View
+                android:background="@color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:paddingRight="40dp"
+                android:gravity="center"
+                android:textColor="#4E4D4D"
+                android:text="关于像素画"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView
+            android:clickable="true"
+            android:text="@string/about"
+            android:textColor="#6A6A6A"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+        <style name="DeveloperItem" parent="@style/Theme.AppCompat.Light.NoActionBar">
+            <item name="android:windowTranslucentStatus">true</item>
+        </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">#F2F2F2</item>
+        <item name="android:fontFamily">@font/fangzheng</item>
+        <item name="lineSpacing">0.1dp</item>
+    </style>
+
+    <style name="CloudTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/fangzheng</item>
+        <item name="lineSpacing">0.1dp</item>
+    </style>
+
+    <style name="ActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">#457BAA</item>
+        <item name="android:statusBarColor">#457BAA</item>
+        <item name="android:fontFamily">@font/fangzheng</item>
+        <item name="lineSpacing">0.1dp</item>
+    </style>
+
+    <style name="DackTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">#151D37</item>
+        <item name="android:navigationBarColor">#151D37</item>
+    </style>
+
+    <!-- 圆形图片 -->
+    <style name="roundedCornerImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- 圆角图片 -->
+    <style name="imageRadius">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <!-- Tool圆角图片 -->
+    <style name="toolRadius">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <!-- 像素画 -->
+    <style name="drawActivity">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+    <!-- 像素画 -->
+    <style name="Fragment_community_head">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">6dp</item>
+        <item name="cornerSizeTopRight">6dp</item>
+    </style>
+    <!--ChatGpt底部弹窗动画-->
+    <style name="ChatDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:windowEnterAnimation">@anim/up</item>
+        <item name="android:windowExitAnimation">@anim/down</item>
+    </style>
+</resources>

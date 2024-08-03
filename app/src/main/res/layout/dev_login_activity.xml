@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:lottie_rawRes="@raw/welcome"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <RelativeLayout
+        android:background="@drawable/login_top_style"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="WELCOME TO "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/app_name"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <!-- 登录区块 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/login_account"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/login_edit_style"
+                android:hint="account"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColorHint="#4E4B49" />
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/login_edit_style"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColorHint="#4E4B49" />
+
+            <Button
+                android:id="@+id/login_enter"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/login_button_style"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:text="还没有账号，我要注册"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/qq_login"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/qq_logo"
+                android:padding="2dp"
+                app:shapeAppearanceOverlay="@style/roundedCornerImageStyle" />
+            <TextView
+                android:text="QQ一键登录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--顶部布局-->
+    <RelativeLayout
+        android:id="@+id/deltaRelative"
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:background="#F8FFFFFF"
+        android:layout_height="110dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/app_name"
+            android:textColor="#686868"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/bing_content"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#575757" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/Home_Banner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/notimg"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            app:strokeColor="#A1FFFFFF"
+            app:strokeWidth="4dp"
+            app:shapeAppearanceOverlay="@style/roundedCornerImageStyle" />
+
+    </RelativeLayout>
+    <!--外围-->
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/animateToStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top|center">
+
+            <RelativeLayout
+                android:clipChildren="false"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.minibox.minideveloper.View.SobViewPager
+                    android:id="@+id/fragment_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:scrollbars="none"
+                android:background="@drawable/community_recycler_item_style"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="330dp"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <!--音乐搜索-->
+                    <RelativeLayout
+                        android:id="@+id/music_id"
+                        android:layout_weight="1"
+                        android:background="@drawable/tool_style"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:text="音乐搜索"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/music"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    </RelativeLayout>
+
+                    <!--图片转脚本-->
+                    <RelativeLayout
+                        android:id="@+id/wx_sports"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/tool_style1"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="修改步数"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/sports"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <!--官网-->
+                    <RelativeLayout
+                        android:id="@+id/blog"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/tool_style2"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="官方网站"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/puzzle"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    </RelativeLayout>
+
+                    <!--预设-->
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/tool_style2"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="预设位置"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/puzzle"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_recyclerview"
+                    android:layout_width="330dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

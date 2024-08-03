@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical">
+    <!--    顶部标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/article_activity_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/turn_left_night" />
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布帖子"
+            android:textSize="18sp" />
+
+
+        <ImageButton
+            android:id="@+id/send_article"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/send" />
+
+        <TextView
+            android:id="@+id/code_article"
+            android:text="预览"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#FF8F8F"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="60dp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/article_title"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="请输入完整标题"
+        android:textColor="#6A6A6A"
+        android:textColorHint="#C1C1C1"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:autofillHints="" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="#E8E8E8" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_weight="1.0"
+            android:id="@+id/article_content"
+            android:gravity="start|top"
+            android:padding="10dp"
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="内容（不要太短）"
+            android:textColor="#606060"
+            android:textColorHint="#707070"
+            android:textSize="16sp"/>
+
+
+        <LinearLayout
+            android:background="#F3F3F3"
+            android:orientation="horizontal"
+            android:gravity="start|center"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/s_fish"
+                android:text="鱼塘"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/article_section"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:id="@+id/s_article"
+                android:text="文章"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/article_section"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:id="@+id/s_lua"
+                android:text="Lua"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/article_section"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:id="@+id/s_java"
+                android:text="Java"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/article_section"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:id="@+id/s_html"
+                android:text="Html"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/article_section"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:gravity="start|center"
+            android:layout_width="match_parent"
+            android:background="#F3F3F3"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/article_code"
+                android:src="@drawable/ic_code"
+                android:layout_marginStart="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <ImageView
+                android:id="@+id/article_photo"
+                android:src="@drawable/ic_pic"
+                android:layout_marginStart="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <ImageView
+                android:id="@+id/article_cite"
+                android:src="@drawable/ic_quote"
+                android:layout_marginStart="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <ImageView
+                android:id="@+id/article_text_bold"
+                android:src="@drawable/ic_text_bold"
+                android:layout_marginStart="20dp"
+                android:layout_width="20dp"
+                android:layout_height="15dp"/>
+            <TextView
+                android:id="@+id/article_text_title"
+                android:text="H"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:src="@drawable/ic_text_bold"
+                android:layout_marginStart="20dp"
+                android:layout_width="20dp"
+                android:layout_height="25dp"/>
+            <TextView
+                android:id="@+id/article_markdown_help"
+                android:text="如何使用Markdown语法"
+                android:textColor="#54CA68"
+                android:textSize="11dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:src="@drawable/ic_text_bold"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

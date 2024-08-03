@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--    顶部标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:elevation="3dp">
+
+            <ImageButton
+                android:id="@+id/details_exit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/turn_left" />
+
+            <LinearLayout
+                android:id="@+id/details_editor"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/details_view"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/Details_ImageButton_Editor"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/edit_data" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/details_background_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_one" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/details_head_portrait"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="90dp"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedCornerImageStyle" />
+
+        <TextView
+            android:id="@+id/details_sing"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/details_sing_style"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="160dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:gravity="center|start"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <View
+                android:layout_marginEnd="10dp"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:background="#8B94F6"/>
+
+            <TextView
+                android:text="动态"
+                android:textSize="16sp"
+                android:textColor="#97A2DD"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabIndicator="@drawable/tablayout_item_style"
+                app:tabMode="scrollable"
+                app:tabRippleColor="@color/white"
+                app:tabSelectedTextColor="#97A2DD"
+                app:tabTextColor="#323232"
+                app:tabIndicatorColor="#97A2DD"
+                app:tabIndicatorFullWidth="false"/>
+
+        </LinearLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

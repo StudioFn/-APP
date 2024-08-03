@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    顶部标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/preview_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/turn_left_night"
+            android:contentDescription="@string/todo" />
+
+
+        <TextView
+            android:text="预览"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/preview_title"
+                android:text="@string/app_name"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp"
+                android:textColor="#505050"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center|start"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:text="发布时间"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/consult_article_activity_label_blue"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="65dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:text="2020-12-01 23:00"
+                    android:id="@+id/md_article_time"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#515151"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+            </LinearLayout>
+
+            <br.tiagohm.markdownview.MarkdownView
+                android:id="@+id/preview_markdown"
+                app:escapeHtml="false"
+                android:layout_width="420dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

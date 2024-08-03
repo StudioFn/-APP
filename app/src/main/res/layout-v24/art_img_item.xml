@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ 作者：远赤Copyright (c) 2023
+  ~ 未经允许，禁止转载！！
+  ~ 联系方式：QQ
+  ~ 2308762185
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/art_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/recycler_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:shapeAppearanceOverlay="@style/imageRadius" />
+
+        <ImageView
+            android:id="@+id/image_remove"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_close_back"
+            android:src="@drawable/ic_close" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rvImage_load"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/image_item"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_add" />
+    </LinearLayout>
+
+
+</LinearLayout>

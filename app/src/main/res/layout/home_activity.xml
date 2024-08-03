@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F2F3F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.minibox.minideveloper.View.NewViewPager
+        android:id="@+id/home_viewpager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomview"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@drawable/selector_tab_color"
+        app:itemTextColor="@drawable/selector_tab_text_color"
+        app:menu="@menu/navigation"
+        app:itemRippleColor="#DA86D5FF"
+        app:elevation="3dp"
+        android:background="#F2F2F2"/>
+
+</LinearLayout>

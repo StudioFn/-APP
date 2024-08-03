@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--    顶部标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:id="@+id/blog_exit"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/turn_left_night"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="和圈APP"
+            android:id="@+id/title"
+            android:textColor="#454545"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+
+    </RelativeLayout>
+    <ProgressBar
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/blog_progressbar"
+        android:layout_width="match_parent"
+        android:progressDrawable="@drawable/progress_style"
+        android:layout_height="3dp"/>
+    <com.zyf.italker.customview.bouncelayout.BounceConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <WebView
+            android:id="@+id/blog_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.zyf.italker.customview.bouncelayout.BounceConstraintLayout>
+
+</LinearLayout>

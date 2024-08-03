@@ -1,0 +1,43 @@
+local M,p,x,y,z,i,j,k,v,u,g,f,ss=0,0,0,0,0,0,0,0,0,0,0,{},【0】
+local tr={[1]="生成",[8]="清除"}
+local function g1(c) local a=math.floor(c/h) local b=c%h
+if a%2==1 then b=h-b-1 end return x+b,y,z+a*ss end
+local function g2(c) local a=math.floor(c/h)
+local b=c%h if a%2==1 then b=h-b-1 end
+if a%2==0 then return x+b+ss/2,y,z+a*ss+ss/2
+else return x+b-ss/2,y,z+a*ss+ss/2 end end
+local function g3(c) local a=math.floor(c/h) local b=c%h
+if a%2==1 then b=h-b-1 end return x+b,y,z+a*ss end
+local function g4(c) local a=math.floor(c/h)
+local b=c%h if a%2==1 then b=h-b-1 end return w*h-a*ss-b*w end
+local function g5(c) local a=math.floor(c/h)
+local b=c%h if a%2==0 and b%ss==0 then return true
+elseif a%2==1 and ((h-b-1)%ss==ss-1 or b==0) then return true else return false end end
+local function m(s) Chat:sendSystemMsg(s) end
+local function o(e) k,p=Player:getHostUin() Player:setActionAttrState(p,64,false) Player:setAttr(p,11,30) Backpack:setGridItem(p,1000,1,9,nil) Backpack:setGridItem(p,1007,8,9,nil) k=math.ceil(w/ss)*h
+m("#G在要生成的区域的#R右下角#G放置#R地心基石#G，即可在#R东北#G生成\n#Y在原位置放置#R地心门框#Y即可#R清除像素图") end
+local function l(e) M=e.blockid if v==0 and (M==1 or M==8) then
+x,y,z=math.floor(e.x),math.floor(e.y),math.floor(e.z) Player:setAttr(p,11,0)
+if #f==0 then g,u,v=0,1,1 else g,u,v=0,0,2 end end end
+local function r() if v==1 and u<#A then
+local D=string.find(A,"B",u+1) local C=""
+while u<D do C=string.sub(A,u,u) if C=="0" or C=="1" then
+f[#f+1]=B[string.sub(A,u,u+1)] u=u+2
+elseif C=="A" then i=string.find(A,"A",u+1) C=string.sub(A,i+1,i+1)
+if C=="0" or C=="1" then C=string.sub(A,i+1,i+2) end
+for j=1,tonumber(string.sub(A,u+1,i-1)) do f[#f+1]=B[C] end u=i+#C+1
+else f[#f+1]=B[C] u=u+1 end end g=g+1
+m("#R请勿移动#G正在解析:#Y"..(math.floor(g/h*1000)/10).."%")
+if u==#A then g,u,v=0,0,2 end elseif v==2 and u<k then g=g+1
+if g==【1】 then Player:setPosition(p,g1(u))
+elseif g==【2】 then Player:setPosition(p,g2(u)) elseif g>【3】 then
+if u<k-h or w%ss==0 then j=ss else j=w%ss end
+local G,H,J=g3(u) local ii=g4(u) if M==1 then
+for i=0,j-1 do if f[ii-i]~=0 then Block:setBlockAll(G,H,J+i,f[ii-i]%1000,math.floor(f[ii-i]/1000)) end end
+else for i=0,j-1 do if f[ii-i]~=0 then Block:destroyBlock(G,H,J+i,false) end end end
+u=u+1
+if g5(u) then g=0 end m("#R请勿移动#G正在"..tr[M]..":#Y"..(math.floor(u/k*1000)/10).."%")
+if u==k then Player:setPosition(p,x+h,y,z+w) v=0 m("#G"..tr[M].."完毕") Player:setAttr(p,11,30) end end end end
+ScriptSupportEvent:registerEvent('Game.Start',o)
+ScriptSupportEvent:registerEvent('Block.PlaceBy',l)
+ScriptSupportEvent:registerEvent('Game.Run',r)

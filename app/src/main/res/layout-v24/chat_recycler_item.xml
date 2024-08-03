@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/chat_recycler_left"
+            android:gravity="start"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_chat_request"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundedCornerImageStyle"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/chat_recycler_left_text"
+                    android:background="@drawable/msg_bot_item"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:enabled="true"
+                    android:textIsSelectable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:gravity="start|center"
+                    android:text="@string/app_name"
+                    android:textColor="#FFFFFF"
+                    android:maxWidth="230dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/chat_recycler_full"
+                    android:background="@drawable/ic_full"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--分割线-->
+
+        <LinearLayout
+            android:id="@+id/chat_recycler_right"
+            android:gravity="end"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/chat_recycler_right_text"
+                android:background="@drawable/nsg_me_item"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:enabled="true"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:gravity="start|center"
+                android:padding="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/app_name"
+                android:textColor="#292929"
+                android:maxWidth="230dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/chat_recycler_shape"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundedCornerImageStyle"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

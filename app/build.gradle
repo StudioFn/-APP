@@ -1,0 +1,80 @@
+
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+//    api发布时需要重构
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'armeabi-v7a', 'x86_64'
+//            universalApk true
+//        }
+//    }
+        defaultConfig {
+        applicationId "com.minibox.minideveloper"
+        minSdk 22
+        targetSdk 30
+        versionCode 1
+        versionName "5.8.97"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86' , 'armeabi-v7a', 'x86_64'//, 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            //是否混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        //release发布提示错误，可能是某个控件没有赋了值，找不到错误所在，所以遏止报错
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.github.ZYF99:UI2:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+    implementation "com.airbnb.android:lottie:5.2.0"//第三方动画库
+    implementation 'com.google.code.gson:gson:2.9.1'//Gson
+    //noinspection GradleCompatible,GradleCompatible
+    implementation 'com.android.support:palette-v7:28.0.0'
+
+    implementation  'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation  'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    implementation 'com.github.bumptech.glide:glide:4.13.2'//异步加载图片
+    implementation 'com.github.tiagohm.MarkdownView:library:0.19.0'//Markdown解析
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v5.0.0-alpha'//AgentWeb
+    implementation 'com.tencent.bugly:crashreport:latest.release'//崩溃日志获取
+    // 友盟统计SDK
+    implementation  'com.umeng.umsdk:common:9.6.3'
+    implementation  'com.umeng.umsdk:asms:1.6.3'
+    implementation  'com.umeng.umsdk:apm:1.7.0'
+    implementation  'com.umeng.umsdk:push:6.5.8'
+    implementation 'com.umeng.umsdk:uyumao:1.1.2'
+
+    implementation fileTree(dir: 'libs', include: '*.jar')
+
+}

@@ -1,0 +1,31 @@
+local M,a,p,x,y,z,u,o,g,i,j,f,ss=0,0,0,0,0,0,0,0,0,0,0,{},【0】
+local tr={[1]="生成",[8]="清除"}
+local function m(s) Chat:sendSystemMsg(s) end
+local function t(e) a,p=Player:getHostUin() Player:setActionAttrState(p,64,false) Player:setAttr(p,11,30) Backpack:setGridItem(p,1000,1,9,nil) Backpack:setGridItem(p,1007,8,9,nil) a=math.ceil(w/ss)*h m("#G在要生成的区域的#R右下角#G放置#R地心基石#G，即可在#R西侧#G生成\n#Y在原位置放置#R地心门框#Y即可#R清除像素图") end
+local function l(e) M=e.blockid if u==0 and (M==1 or M==8) then
+x,y,z=math.floor(e.x),math.floor(e.y),math.floor(e.z) Player:setAttr(p,11,0)
+if #f==0 then g,o,u=0,1,1 else g,o,u=0,0,2 end end end
+local function r() if u==1 and o<#A then
+local C,D=string.find(A,"B",o+1),""
+while o<C do D=string.sub(A,o,o) if D=="0" or D=="1" then
+f[#f+1]=B[string.sub(A,o,o+1)] o=o+2 elseif D=="A" then
+i=string.find(A,"A",o+1) D=string.sub(A,i+1,i+1)
+if D=="0" or D=="1" then D=string.sub(A,i+1,i+2) end
+for j=1,tonumber(string.sub(A,o+1,i-1)) do f[#f+1]=B[D] end
+o=i+#D+1 else f[#f+1]=B[D] o=o+1 end end g=g+1
+m("#R请勿移动#G正在解析:#Y"..(math.floor(g/h*1000)/10).."%")
+if o==#A then g,o,u=0,0,2 end elseif u==2 and o<a then
+g=g+1 if g==【1】 then Player:setPosition(p,x-ss*o/h,y,z)
+elseif g==【2】 then if o==a-h then Player:setPosition(p,x-w+math.floor((w%ss)/2),y,z)
+else Player:setPosition(p,x-ss/2-ss*o/h,y,z) end
+elseif g>【3】 then if o<a-h or w%ss==0 then j=ss else j=w%ss end
+local F,G,H=x-math.floor(o/h)*ss,y+o%h,z
+local E=w*h-math.floor(o/h)*ss-(o%h)*w if M==1 then
+for i=0,j-1 do if f[E-i]~=0 then Block:setBlockAll(F-i,G,H,f[E-i]%1000,math.floor(f[E-i]/1000)) end end
+else for i=0,j-1 do if f[E-i]~=0 then Block:destroyBlock(F-i,G,H,false) end end end
+o=o+1 if o%h==0 then g=0 end
+m("#R请勿移动#G正在"..tr[M]..":#Y"..(math.floor(o/a*1000)/10).."%")
+if o==a then u=0 m("#G"..tr[M].."完毕") Player:setAttr(p,11,30) end end end end
+ScriptSupportEvent:registerEvent('Game.Start',t)
+ScriptSupportEvent:registerEvent('Block.PlaceBy',l)
+ScriptSupportEvent:registerEvent('Game.Run',r)

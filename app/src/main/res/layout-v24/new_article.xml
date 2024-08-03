@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:background="@drawable/ic_article_background">
+    <!--    顶部标题-->
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/article_activity_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/turn_left_night" />
+
+        <TextView
+            android:id="@+id/new_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布帖子"
+            android:textSize="18sp" />
+
+
+        <ImageButton
+            android:id="@+id/send_article"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/send" />
+
+    </RelativeLayout>
+
+
+
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/article_title"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:hint="请输入完整标题"
+        android:textColor="#6A6A6A"
+        android:textColorHint="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:autofillHints="" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/article_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="start|top"
+            android:padding="10dp"
+            android:layout_width="340dp"
+            android:layout_height="300dp"
+            android:background="@drawable/new_article_edit"
+            android:hint="内容（至少10个字）"
+            android:textColor="#606060"
+            android:textColorHint="#707070"
+            android:textSize="16sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/new_article_recycler"
+            android:layout_marginTop="310dp"
+            android:layout_width="340dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="100dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

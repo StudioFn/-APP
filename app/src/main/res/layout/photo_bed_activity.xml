@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    顶部标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FFFFFFFF"
+        android:elevation="5dp"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:id="@+id/cloud_exit"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/turn_left_night"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配置图床"
+            android:textColor="#8A8A8A"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:id="@+id/photo_bed_register"
+            android:textColor="#F15858"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/photo_bed_key"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#ED6060"
+            android:text="KEY: 256984003523655305"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <EditText
+            android:paddingStart="10dp"
+            android:hint="输入邮箱账号"
+            android:id="@+id/photo_bed_mail"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:paddingStart="10dp"
+            android:hint="输入密码"
+            android:id="@+id/photo_bed_password"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/photo_bed_enter"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_button_style"
+            android:text="获取"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:elevation="3dp"
+            android:background="@drawable/draw_style"
+            android:layout_marginTop="30dp"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+                <View
+                    android:background="#BFAFF8"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:gravity="center"
+                    android:textColor="#4E4D4D"
+                    android:text="使用果果图床须知"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <TextView
+                android:clickable="true"
+                android:text="@string/photo_bed_about"
+                android:textColor="#6A6A6A"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/community_recycler_item_style"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/search_recycler_img"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/imageRadius"
+        android:src="@drawable/img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <LinearLayout
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center|start"
+        android:orientation="vertical"
+        android:layout_width="250dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/search_recycler_title"
+            android:layout_marginStart="10dp"
+            android:textSize="16dp"
+            android:text="@string/todo"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/search_recycler_author"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:ellipsize="end"
+            android:textSize="13dp"
+            android:text="作者：薛之谦"
+            android:lines="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
